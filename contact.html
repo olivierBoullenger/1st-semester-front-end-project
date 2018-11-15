@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <title>Printing3D Contact</title>
+   </head>
+   <body data-spy="scroll" data-target="#navabar-site" data-offet="70">
+      <div class="container-fluid full d-flex justify-content-center">
+         <header>
+            <nav id="navabar-site" class="navbar container fixed-top navbar-expand-lg navbar-dark d-flex justify-content-center">
+               <div>
+                  <a class="navbar-brand" href="index.html" id="brandlogo">PRINTING 3D</a>
+               </div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="navbar-collapse collapse " id="navbarNavDropdown">
+                  <!--Debut de la fonction collapse -->
+                  <ul class="navbar-nav text-center">
+                     <li class="nav-item ">
+                        <a class="nav-link" href="index.html#presentation">Qui sommes nous<span class="sr-only">(current)</span></a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="index.html#team">L'équipe<span class="sr-only">(current)</span></a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="nos_produits.html">Nos produits <span class="sr-only">(current)</span></a>
+                     </li>
+                  </ul>
+                  <div class="dropdown text-center" aria-labelledby="navbarDropdownMenuLink">
+                     <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Plus
+                     </button>
+                     <div class="dropdown-menu col text-center" id="navbarDropdownMenuLink" >
+                        <a class="dropdown-item" href="contact.html#contact" >Nous contacter</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item " href="mention_legales.html">Mentions légales</a>
+                     </div>
+                  </div>
+               </div>
+               <!--Fin de la fonction collapse -->
+            </nav>
+         </header>
+      </div>
+      <!--Debut du contenu de la page Contact -->
+      <section class="container" id="contact">
+         <div class="container">
+            <div class="row col-xs-6 col-md-8 col-lg-10 d-flex align-items-center">
+               <h2 class="text-lg-center text-md-left text-sm-left">Nous contacter</h2>
+               <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte</p>
+            </div>
+         </div>
+         <div class="container">
+            <!--container-->
+            <form id="contact-form" method="post" action="contact.php">
+               <div class="messages"></div>
+               <div class="controls">
+                  <!-- div controls-->
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="form-group">
+                           <label for="form_name">Nom *</label>
+                           <input id="form_name" type="text" name="name" class="form-control" placeholder="Ecrivez votre Nom de famille *" required="required" data-error="Votre Nom est requis.">
+                           <div class="help-block with-errors"></div>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                           <label for="form_lastname">Prénom *</label>
+                           <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Ecrivez votre Prénom *" required="required" data-error="Votre Prénom est requis.">
+                           <div class="help-block with-errors"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="form-group">
+                           <label for="form_email">Email *</label>
+                           <input id="form_email" type="email" name="email" class="form-control" placeholder="Ecrivez votre email *" required="required" data-error="Entrez un email valid s'il vous plaît.">
+                           <div class="help-block with-errors"></div>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                           <label for="form_need">Quel est le sujet de votre mail?</label>
+                           <select id="form_need" name="need" class="form-control" required="required" data-error="Vous devez préciser la raison de votre email.">
+                              <option value="" label="Sujet"></option>
+                              <option value="Request quotation">information</option>
+                              <option value="Request order status">Un eventuel projet</option>
+                              <option value="Request copy of an invoice">Vous souhaitez rejoindre l'équipe?</option>
+                              <option value="Other">Autres</option>
+                           </select>
+                           <div class="help-block with-errors"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="form-group">
+                           <label for="form_message">Votre message *</label>
+                           <textarea id="form_message" name="message" class="form-control" placeholder="Votre message *" rows="4" required="required" data-error="Votre message est vide, veuillez remplr le champs."></textarea>
+                           <div class="help-block with-errors"></div>
+                        </div>
+                     </div>
+                     <div class="col-md-12">
+                        <input type="submit" class="btn btn-dark btn-success btn-send" value="Envoyer" >
+                     </div>
+                  </div>
+               </div>
+               <!-- fin div controls-->
+            </form>
+         </div>
+         <!-- fin container-->
+      </section>
+      <footer class="footer">
+         <div class="container ">
+            <div class="row ">
+               <div class="col  text-center ">
+                  <ul class=" list-inline ">
+                     <li class="list-inline-item "> <a class="nounderline" href="index.html">PRINTING 3D</a></li>
+                     <li class="list-inline-item "><a class="nounderline" href="index.html#presentation">Qui sommes nous</a></li>
+                     <li class="list-inline-item "><a class="nounderline" href="index.html#team">l'équipe</a></li>
+                     <li class="list-inline-item "><a class="nounderline" href="nos_produits.html">Nos produits</a></li>
+                     <li class="list-inline-item"><a class="nounderline" href="contact.html#contact">Nous contacter</a></li>
+                     <li class="list-inline-item "><a class="nounderline" href="mention_legales.html">Mentions légales</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="row  ">
+               <div class="col text-center">
+                  <ul class="list-inline">
+                     <li class="list-inline-item"><a class="nounderline" href="#"><small  class="fa fa-lg fa-google-plus">  </small></a></li>
+                     <li class="list-inline-item"><a  class="nounderline" href="#"><small class="fa fa-lg fa-linkedin"></small></a></li>
+                     <li class="list-inline-item"><a class="nounderline" href="#"><small class="fa fa-lg fa-twitter "></small></a></li>
+                     <li class="list-inline-item"><a class="nounderline" href="#"><small class="fa fa-lg fa-facebook"></small></a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="row ">
+               <div class="col text-center">
+                  <ul class="list-inline">
+                     <li class="list-inline-item">Printing3D&copy; 2018</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/script.js"></script>
+   </body>
+</html>
